@@ -7,6 +7,7 @@ sed -i -e '/^##### advanced configuration options #####/a output = "json"' ~/.bl
 sed -i -e 's/"bond_denom": "stake"/"bond_denom": "ubnt"/g' ~/.blzd/config/genesis.json
 sed -i -e 's/"denom": "stake"/"denom": "ubnt"/g' ~/.blzd/config/genesis.json
 sed -i -e 's/minimum-gas-prices = ""/minimum-gas-prices = "10.0ubnt"/g' ~/.blzd/config/app.toml
+sed -i -e 's/laddr = "tcp:\/\/127.0.0.1:26657"/laddr = "tcp:\/\/0.0.0.0:26657"/g' ~/.blzd/config/config.toml
 blzcli config chain-id bluzelle 
 blzcli config output json 
 blzcli config indent true 
